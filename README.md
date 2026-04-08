@@ -1,71 +1,51 @@
-# opusmax-monitor README
+# OpusMax Monitor
 
-This is the README for your extension "opusmax-monitor". After writing up a brief description, we recommend including the following sections.
+Monitor your OpusMax API key usage directly in the VS Code status bar.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Live status bar** — shows usage percentage, progress bar, and countdown timer to your usage window reset
+- **$(claude) icon** — displays in the VS Code status bar alongside your usage stats
+- **Auto-load** — activates on VS Code startup automatically
+- **Secure key storage** — your API key is stored securely using VS Code's SecretStorage
+- **Click to refresh** — click the status bar item anytime to fetch fresh data
+- **Color-coded** — green (≤70%), yellow (71-90%), red (>90%)
 
-For example if there is an image subfolder under your extension project workspace:
+## Status Bar Format
 
-\!\[feature X\]\(images/feature-x.png\)
+```
+$(claude) ████████░░ 80% ⏱ 02:14:32
+```
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- `████████░░` — 10-character progress bar
+- `80%` — current usage percentage
+- `02:14:32` — live countdown to window reset (ticks every second, no API calls)
 
-## Requirements
+## Commands (Ctrl+Shift+P)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+| Command | Description |
+|---|---|
+| `OpusMax: Configure Key` | Enter or update your OpusMax API key |
+| `OpusMax: Refresh Usage` | Manually refresh usage data |
+| `OpusMax: Clear Key` | Remove your stored API key |
 
-## Extension Settings
+## Setup
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Install the extension
+2. Press `Ctrl+Shift+P` → `OpusMax: Configure Key`
+3. Enter your OpusMax API key
+4. The status bar will show your usage immediately
 
-For example:
+## Installation
 
-This extension contributes the following settings:
+### Local (.vsix)
+```bash
+code --install-extension opusmax-monitor-0.0.1.vsix
+```
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+### From VS Code Marketplace
+Search for **OpusMax Monitor** in the Extensions view.
 
-## Known Issues
+## License
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+MIT

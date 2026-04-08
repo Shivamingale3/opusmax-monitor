@@ -5,13 +5,17 @@
   "version": "0.0.1",
   "icon": "icon.png",
   "publisher": "opusmax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shivamingale3/opusmax-monitor"
+  },
   "engines": {
     "vscode": "^1.110.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["onStartupFinished"],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
