@@ -1,8 +1,10 @@
 {
   "name": "opusmax-monitor",
   "displayName": "OpusMax Monitor",
-  "description": "Extension to check usage of your opus max kay",
+  "description": "Monitor your OpusMax API key usage directly in VS Code",
   "version": "0.0.1",
+  "icon": "icon.png",
+  "publisher": "opusmax",
   "engines": {
     "vscode": "^1.110.0"
   },
@@ -14,10 +16,34 @@
   "contributes": {
     "commands": [
       {
-        "command": "opusmax-monitor.helloWorld",
-        "title": "Hello World"
+        "command": "opusmax.configureKey",
+        "title": "OpusMax: Configure Key"
+      },
+      {
+        "command": "opusmax.refreshUsage",
+        "title": "OpusMax: Refresh Usage"
+      },
+      {
+        "command": "opusmax.clearKey",
+        "title": "OpusMax: Clear Key"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "opusmax-panel",
+          "title": "OpusMax Usage"
+        }
+      ]
+    },
+    "views": {
+      "opusmax-panel": [
+        {
+          "id": "opusmax-usage",
+          "type": "webview"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
