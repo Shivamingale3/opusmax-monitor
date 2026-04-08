@@ -4,7 +4,7 @@
   "description": "Monitor your OpusMax API key usage directly in VS Code",
   "version": "0.1.0",
   "icon": "icon.png",
-  "publisher": "ShivamIngale024",
+  "publisher": "shivamingale3",
   "repository": {
     "type": "git",
     "url": "https://github.com/Shivamingale3/opusmax-monitor"
@@ -15,7 +15,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
