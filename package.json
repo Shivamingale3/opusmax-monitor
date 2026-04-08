@@ -2,7 +2,7 @@
   "name": "opusmax-monitor",
   "displayName": "OpusMax Monitor",
   "description": "Monitor your OpusMax API key usage directly in VS Code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icon": "icon.png",
   "publisher": "shivamingale3",
   "repository": {
