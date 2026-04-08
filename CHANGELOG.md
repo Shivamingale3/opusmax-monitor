@@ -13,3 +13,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - auto launch
 - new logo
 
+## [0.1.1]
+
+- Add Antigravity support
