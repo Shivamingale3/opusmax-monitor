@@ -27,23 +27,7 @@
         "command": "opusmax.clearKey",
         "title": "OpusMax: Clear Key"
       }
-    ],
-    "viewsContainers": {
-      "panel": [
-        {
-          "id": "opusmax-panel",
-          "title": "OpusMax Usage"
-        }
-      ]
-    },
-    "views": {
-      "opusmax-panel": [
-        {
-          "id": "opusmax-usage",
-          "type": "webview"
-        }
-      ]
-    }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
